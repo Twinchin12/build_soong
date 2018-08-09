@@ -152,6 +152,7 @@ func decodeSdkDep(ctx android.EarlyModuleContext, sdkContext android.SdkContext)
 			systemModules:      fmt.Sprintf("core-%s-stubs-system-modules", systemModulesKind),
 			java9Classpath:     []string{module},
 			frameworkResModule: "framework-res",
+			vendorResModule:    "com.evervolv.platform-res",
 			aidl:               android.OptionalPathForPath(aidl),
 		}
 	}
@@ -164,6 +165,7 @@ func decodeSdkDep(ctx android.EarlyModuleContext, sdkContext android.SdkContext)
 			bootclasspath:      corePlatformBootclasspathLibraries(ctx),
 			classpath:          config.FrameworkLibraries,
 			frameworkResModule: "framework-res",
+			vendorResModule:   "com.evervolv.platform-res",
 		}
 	case android.SdkNone:
 		systemModules := sdkContext.SystemModules()

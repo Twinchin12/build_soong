@@ -370,6 +370,11 @@ func gatherRequiredDepsForTest() string {
 		android_app {
 			name: "framework-res",
 			sdk_version: "core_platform",
+		}
+
+		android_app {
+			name: "com.evervolv.platform-res",
+			sdk_version: "core_platform",
 		}`
 
 	systemModules := []string{
